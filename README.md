@@ -27,7 +27,7 @@ git push origin main
 ```
 
 if u does not have right to modify main branch, do following
- 
+
 ```bash
 # open your cmd/bash and locate the repo position
 cd /your/location/hong-kong-fintech-career-analyst
