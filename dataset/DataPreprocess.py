@@ -5,7 +5,7 @@ import os
 
 # ====================== 1. 批量读取所有文件并合并 ======================
 # 文件路径与列表（对应你所有的IT/金融CSV）
-FOLDER_PATH = "C:/Users/18142/Desktop/hk课程/7810周二/group/hong-kong-fintech-career-analyst/dataset"
+FOLDER_PATH = "./"
 FILE_LIST = [
     "140-2025-11 IT jobs.csv",
     "hk-2025-12 Finance jobs.csv",
