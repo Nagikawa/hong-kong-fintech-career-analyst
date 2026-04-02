@@ -21,12 +21,28 @@ df['avg_salary'] = pd.to_numeric(df['avg_salary'], errors='coerce')
 print("Data loaded successfully. Generating 15 visualizations...\n")
 
 # ==================== 1. Work Types Distribution (Pie Chart) ====================
-plt.figure(figsize=(10, 8))
+plt.figure(figsize=(11, 9))
+
 work_types = df['workTypes_label'].value_counts()
-plt.pie(work_types, labels=work_types.index, autopct='%1.1f%%', startangle=90, 
-        colors=sns.color_palette('Set3', len(work_types)))
+
+wedges, texts = plt.pie(work_types, 
+                        startangle=90, 
+                        colors=sns.color_palette('Set3', len(work_types)),
+                        wedgeprops={'edgecolor': 'white', 'linewidth': 1.5})
+
+
+percentages = work_types / work_types.sum() * 100
+legend_labels = [f'{label} ({pct:.1f}%)' for label, pct in zip(work_types.index, percentages)]
+
+plt.legend(wedges, legend_labels,
+           title="Work Types",
+           loc="upper right", 
+           bbox_to_anchor=(1.25, 1.0),  
+           fontsize=11)
+
 plt.title('1. Work Types Distribution', fontsize=16, pad=20)
 plt.axis('equal')
+
 plt.savefig('viz1_work_types_pie.png', dpi=300, bbox_inches='tight')
 plt.close()
 
