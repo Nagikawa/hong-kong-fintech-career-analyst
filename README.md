@@ -9,9 +9,9 @@ This repo is a collection of analyst reports and codes about Hong Kong Fintech C
 ```bash
 # open your cmd and locate any position u want
 cd /your/want/position/
-git clone git@github.com:ava1anch33/hong-kong-fintech-career-analyst.git
+git clone git@github.com:Nagikawa/hong-kong-fintech-career-analyst.git
 # since you may not have SSH key in your computer, use following command
-git clone https://github.com/ava1anch33/hong-kong-fintech-career-analyst.git
+git clone https://github.com/Nagikawa/hong-kong-fintech-career-analyst.git
 cd hong-kong-fintech-career-analyst
 ```
 
